@@ -38,13 +38,13 @@ def randomized_quick_sort(a, l, r):
     #use partition3
     m = partition3(a, l, r)
 #     m = partition2(a, l, r)
-    randomized_quick_sort(a, l, m[0] - 1);
-    randomized_quick_sort(a, m[1] + 1, r);
+    randomized_quick_sort(a, l, m[0] - 1)
+    randomized_quick_sort(a, m[1] + 1, r)
 
 
 if __name__ == '__main__':
-    input = sys.stdin.read()
-    n, *a = list(map(int, input.split()))
+    n = int(input())
+    a = list(map(int, sys.stdin.readline().split()))
     randomized_quick_sort(a, 0, n - 1)
     for x in a:
         print(x, end=' ')
