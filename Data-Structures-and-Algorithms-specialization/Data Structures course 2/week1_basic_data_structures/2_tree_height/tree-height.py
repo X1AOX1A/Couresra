@@ -9,7 +9,7 @@ class TreeHeight:
                 self.n = int(sys.stdin.readline())
                 self.parent = list(map(int, sys.stdin.readline().split()))
         def compute_height(self):
-                maxHeight = 0;
+                maxHeight = 0
                 heights = [0] * len(self.parent)
                 for vertex in range(self.n):
                     if (heights[vertex] != 0):
